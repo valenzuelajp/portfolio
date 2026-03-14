@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<!-- CERTIFICATIONS PAGE -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/portfolio.css" />
+    <script src="JS/portfolio.js" defer></script>
+    <title>Certifications - Jhon Paul Valenzuela</title>
+</head>
+
+
+<body>
+
+
+    <nav>
+        <a href="index.html" class="logo">JP</a>
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="menu-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="experience.html">Experience</a></li>
+            <li><a href="tech-stack.html">Tech Stack</a></li>
+            <li><a href="certifications.html">Certifications</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- CERTIFICATIONS SECTION -->
+    <div class="perPageDark" id="cer">
+        <div class="about_main">
+            <div class="about-text reveal-left">
+                <h2>Certifications</h2>
+                <div class="cert-grid">
+                    <a href="https://www.credly.com/badges/d3fe8705-f262-4bc3-a044-9acb3eac7258/public_url"
+                        target="_blank" class="cert-item reveal delay-100">
+                        <img src="images/phyton.png" alt="Python Essentials 1">
+                        <span>Python Essentials 1</span>
+                    </a>
+                    <a href="https://www.credly.com/badges/e5daf322-a28c-4a4f-9eaa-f9f048cfa7b4/public_url"
+                        target="_blank" class="cert-item reveal delay-200">
+                        <img src="images/esssential.png" alt="Cybersecurity Essentials">
+                        <span>Cybersecurity Essentials</span>
+                    </a>
+                    <a href="https://www.credly.com/badges/c6a4fe0b-3736-4fb6-b07f-304d1b4cccac/public_url"
+                        target="_blank" class="cert-item reveal delay-300">
+                        <img src="images/Introduction to Cybersecurity.png" alt="Introduction to Cybersecurity">
+                        <span>Introduction to Cybersecurity</span>
+                    </a>
+                    <a href="https://www.credly.com/badges/0021d3d6-807f-471f-a63b-417fe72b543e/public_url"
+                        target="_blank" class="cert-item reveal delay-400">
+                        <img src="images/html css.png" alt="IT Specialist - HTML and CSS">
+                        <span>IT Specialist - HTML and CSS</span>
+                    </a>
+                    <a href="https://www.credly.com/badges/3bb06096-079b-4456-a86e-c0e7dcd68211/public_url"
+                        target="_blank" class="cert-item reveal delay-500">
+                        <img src="images/osb.png" alt="Operating Systems Basics">
+                        <span>Operating Systems Basics</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SCROLL ANIMATION LOGIC -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Intersection Observer for scroll reveals
+            const observerOptions = {
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('[class*="reveal"]').forEach(el => {
+                observer.observe(el);
+            });
+
+        });
+    </script>
+</body>
+
+</html>
