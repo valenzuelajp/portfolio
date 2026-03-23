@@ -7,13 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="CSS/portfolio.css" />
     <script src="JS/portfolio.js" defer></script>
-    <title>Jhon Paul Valenzuela</title>
+    <title>Jhon Paul Valenzuela | Web Portfolio</title>
 </head>
 
 
 <body>
-
-
+    <!--NAVIGATION BAR-->
     <nav>
         <a href="index.html" class="logo">JP</a>
         <input type="checkbox" id="menu-toggle">
@@ -31,7 +30,7 @@
             <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
-
+    <!--NAVIGATION BAR-->
     <div id="home" class="perPageDark">
         <div class="about_main">
             <div class="about_image fade-in-up">
@@ -53,7 +52,6 @@
     <!-- ANIMATION  -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            // Fade-in animations on page load
             const fadeElements = document.querySelectorAll('.fade-in-up');
             fadeElements.forEach((el, index) => {
                 setTimeout(() => {
@@ -61,7 +59,6 @@
                 }, index * 100);
             });
 
-            // Intersection Observer for scroll reveals
             const observerOptions = {
                 threshold: 0.1,
                 rootMargin: '0px 0px -100px 0px'
@@ -71,18 +68,14 @@
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
                         entry.target.classList.add('active');
-                        // Optional: unobserve after animation
-                        // observer.unobserve(entry.target);
                     }
                 });
             }, observerOptions);
 
-            // Observe all elements with animation classes
             document.querySelectorAll('[class*="fade"], [class*="slide"], [class*="reveal"]').forEach(el => {
                 observer.observe(el);
             });
 
-            // Parallax effect on scroll
             window.addEventListener('scroll', () => {
                 const homeSection = document.getElementById('home');
                 if (homeSection) {
@@ -91,7 +84,6 @@
                 }
             });
 
-            // Add ripple effect on button click
             const buttons = document.querySelectorAll('.social-link');
             buttons.forEach(button => {
                 button.addEventListener('click', function(e) {
@@ -115,4 +107,5 @@
     </script>
 </body>
     <!-- ANIMATION  -->
-</html>
+
+    </html>
