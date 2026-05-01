@@ -42,7 +42,7 @@ body {
 /* HERO & NAVIGATION STYLES */
 .perPageDark {
   min-height: 100vh;
-  width: 100vw;
+  width: 100%;
   padding: 60px 20px;
   display: flex;
   align-items: center;
@@ -56,7 +56,7 @@ body {
 
 .perPageLight {
   min-height: 100vh;
-  width: 100vw;
+  width: 100%;
   padding: 60px 20px;
   display: flex;
   align-items: center;
@@ -667,6 +667,7 @@ nav ul li a:hover {
   display: flex;
   gap: 15px;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .social-link {
@@ -750,8 +751,12 @@ nav ul li a:hover {
     text-align: center;
   }
 
+  .about-text {
+    min-width: 100%;
+  }
+
   .about-text h2 {
-    font-size: 2.2rem;
+    font-size: clamp(1.5rem, 8vw, 2.2rem);
   }
 
   .picture {
@@ -765,7 +770,7 @@ nav ul li a:hover {
 /* MOBILE RESPONSIVENESS (320px and below) */
 @media screen and (max-width: 320px) {
   .about-text h2 {
-    font-size: 1.8rem;
+    font-size: clamp(1.2rem, 10vw, 1.8rem);
   }
 
   .picture {
@@ -800,6 +805,7 @@ nav ul li a:hover {
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
 
@@ -1006,6 +1012,8 @@ body {
 .tech-item img {
   width: 60px;
   height: 60px;
+  object-fit: contain;
+  aspect-ratio: 1 / 1;
   margin-bottom: 15px;
 }
 
