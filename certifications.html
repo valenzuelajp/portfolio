@@ -46,25 +46,25 @@
             <div class="about-text reveal-left">
                 <h2>Certifications</h2>
                 <div class="cert-grid">
-                    <div class="cert-item reveal delay-100">
-                        <img src="images/phyton.png" alt="Python Essentials 1" style="cursor: zoom-in;" onclick="showCert('images/phyton.png', 'Python Essentials 1', 'https://www.credly.com/badges/d3fe8705-f262-4bc3-a044-9acb3eac7258/public_url')">
-                        <a href="https://www.credly.com/badges/d3fe8705-f262-4bc3-a044-9acb3eac7258/public_url" target="_blank" style="text-decoration: none; color: inherit; display: block; width: 100%;"><span>Python Essentials 1</span></a>
+                    <div class="cert-item reveal delay-100" style="cursor: pointer;" onclick="showCert('images/phyton.png', 'Python Essentials 1', 'https://www.credly.com/badges/d3fe8705-f262-4bc3-a044-9acb3eac7258/public_url')">
+                        <img src="images/phyton.png" alt="Python Essentials 1">
+                        <span>Python Essentials 1</span>
                     </div>
-                    <div class="cert-item reveal delay-200">
-                        <img src="images/esssential.png" alt="Cybersecurity Essentials" style="cursor: zoom-in;" onclick="showCert('images/esssential.png', 'Cybersecurity Essentials', 'https://www.credly.com/badges/e5daf322-a28c-4a4f-9eaa-f9f048cfa7b4/public_url')">
-                        <a href="https://www.credly.com/badges/e5daf322-a28c-4a4f-9eaa-f9f048cfa7b4/public_url" target="_blank" style="text-decoration: none; color: inherit; display: block; width: 100%;"><span>Cybersecurity Essentials</span></a>
+                    <div class="cert-item reveal delay-200" style="cursor: pointer;" onclick="showCert('images/esssential.png', 'Cybersecurity Essentials', 'https://www.credly.com/badges/e5daf322-a28c-4a4f-9eaa-f9f048cfa7b4/public_url')">
+                        <img src="images/esssential.png" alt="Cybersecurity Essentials">
+                        <span>Cybersecurity Essentials</span>
                     </div>
-                    <div class="cert-item reveal delay-300">
-                        <img src="images/Introduction to Cybersecurity.png" alt="Introduction to Cybersecurity" style="cursor: zoom-in;" onclick="showCert('images/Introduction to Cybersecurity.png', 'Introduction to Cybersecurity', 'https://www.credly.com/badges/c6a4fe0b-3736-4fb6-b07f-304d1b4cccac/public_url')">
-                        <a href="https://www.credly.com/badges/c6a4fe0b-3736-4fb6-b07f-304d1b4cccac/public_url" target="_blank" style="text-decoration: none; color: inherit; display: block; width: 100%;"><span>Introduction to Cybersecurity</span></a>
+                    <div class="cert-item reveal delay-300" style="cursor: pointer;" onclick="showCert('images/Introduction to Cybersecurity.png', 'Introduction to Cybersecurity', 'https://www.credly.com/badges/c6a4fe0b-3736-4fb6-b07f-304d1b4cccac/public_url')">
+                        <img src="images/Introduction to Cybersecurity.png" alt="Introduction to Cybersecurity">
+                        <span>Introduction to Cybersecurity</span>
                     </div>
-                    <div class="cert-item reveal delay-400">
-                        <img src="images/html css.png" alt="IT Specialist - HTML and CSS" style="cursor: zoom-in;" onclick="showCert('images/html css.png', 'IT Specialist - HTML and CSS', 'https://www.credly.com/badges/0021d3d6-807f-471f-a63b-417fe72b543e/public_url')">
-                        <a href="https://www.credly.com/badges/0021d3d6-807f-471f-a63b-417fe72b543e/public_url" target="_blank" style="text-decoration: none; color: inherit; display: block; width: 100%;"><span>IT Specialist - HTML and CSS</span></a>
+                    <div class="cert-item reveal delay-400" style="cursor: pointer;" onclick="showCert('images/html css.png', 'IT Specialist - HTML and CSS', 'https://www.credly.com/badges/0021d3d6-807f-471f-a63b-417fe72b543e/public_url')">
+                        <img src="images/html css.png" alt="IT Specialist - HTML and CSS">
+                        <span>IT Specialist - HTML and CSS</span>
                     </div>
-                    <div class="cert-item reveal delay-500">
-                        <img src="images/osb.png" alt="Operating Systems Basics" style="cursor: zoom-in;" onclick="showCert('images/osb.png', 'Operating Systems Basics', 'https://www.credly.com/badges/3bb06096-079b-4456-a86e-c0e7dcd68211/public_url')">
-                        <a href="https://www.credly.com/badges/3bb06096-079b-4456-a86e-c0e7dcd68211/public_url" target="_blank" style="text-decoration: none; color: inherit; display: block; width: 100%;"><span>Operating Systems Basics</span></a>
+                    <div class="cert-item reveal delay-500" style="cursor: pointer;" onclick="showCert('images/osb.png', 'Operating Systems Basics', 'https://www.credly.com/badges/3bb06096-079b-4456-a86e-c0e7dcd68211/public_url')">
+                        <img src="images/osb.png" alt="Operating Systems Basics">
+                        <span>Operating Systems Basics</span>
                     </div>
                 </div>
             </div>
@@ -76,6 +76,10 @@
         .swal-uniform-img {
             object-fit: contain !important;
             aspect-ratio: 1 / 1 !important;
+            width: 100% !important;
+            max-width: 350px !important;
+            height: auto !important;
+            margin: 0 auto !important;
         }
     </style>
     <script>
@@ -83,8 +87,6 @@
             Swal.fire({
                 imageUrl: imageSrc,
                 imageAlt: altText,
-                imageWidth: 350,
-                imageHeight: 350,
                 background: 'transparent',
                 backdrop: 'rgba(0,0,0,0.8)',
                 showCancelButton: true,
