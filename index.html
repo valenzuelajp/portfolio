@@ -38,12 +38,12 @@
         </ul>
     </nav>
     <!--NAVIGATION BAR-->
-    <div id="home" class="perPageDark">
-        <div class="about_main">
-            <div class="about_image fade-in-up">
+    <div id="section-hero" class="full-page-section-layout">
+        <div class="main-content-layout">
+            <div class="profile-image-container fade-in-up">
                 <img src="images/jp.png" class="picture">
             </div>
-            <div class="about-text fade-in-up delay-200">
+            <div class="descriptive-content-area fade-in-up delay-200">
                 <h2 style="word-break: break-word; overflow-wrap: break-word; max-width: 100%;">Jhon Paul Valenzuela</h2>
                 <p>Bacoor, Cavite</p>
                 <div class="social-links">
@@ -84,7 +84,7 @@
             });
 
             window.addEventListener('scroll', () => {
-                const homeSection = document.getElementById('home');
+                const homeSection = document.getElementById('section-hero');
                 if (homeSection) {
                     const scrollPosition = window.scrollY;
                     homeSection.style.backgroundPosition = `center ${scrollPosition * 0.5}px`;
