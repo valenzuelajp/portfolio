@@ -12,8 +12,8 @@
         corePlugins: { preflight: false }
       }
     </script>
-    <link rel="stylesheet" href="CSS/portfolio.css" />
-    <script src="JS/portfolio.js" defer></script>
+    <link rel="stylesheet" href="styles/portfolio.css" />
+    <script src="scripts/portfolio.js" defer></script>
     <title>Tech Stack - Jhon Paul Valenzuela</title>
 </head>
 
@@ -70,33 +70,21 @@
                             alt="C#">
                         <span>C#</span>
                     </div>
+                    <div class="tech-item reveal delay-700">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                            alt="JavaScript">
+                        <span>JavaScript</span>
+                    </div>
+                    <div class="tech-item reveal delay-800">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
+                            alt="Node.js">
+                        <span>Node.js</span>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- SCROLL ANIMATION LOGIC -->
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            // Intersection Observer for scroll reveals
-            const observerOptions = {
-                threshold: 0.1
-            };
-
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('active');
-                    }
-                });
-            }, observerOptions);
-
-            document.querySelectorAll('[class*="reveal"]').forEach(el => {
-                observer.observe(el);
-            });
-
-        });
-    </script>
 </body>
 
 </html>

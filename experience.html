@@ -12,8 +12,8 @@
         corePlugins: { preflight: false }
       }
     </script>
-    <link rel="stylesheet" href="CSS/portfolio.css" />
-    <script src="JS/portfolio.js" defer></script>
+    <link rel="stylesheet" href="styles/portfolio.css" />
+    <script src="scripts/portfolio.js" defer></script>
     <title>Experience - Jhon Paul Valenzuela</title>
 </head>
 
@@ -187,47 +187,6 @@
         </div>
     </div>
 
-    <!-- SCROLL ANIMATION LOGIC -->
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            // Intersection Observer for scroll reveals
-            const observerOptions = {
-                threshold: 0.1
-            };
-
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('active');
-                    }
-                });
-            }, observerOptions);
-
-            document.querySelectorAll('[class*="reveal"]').forEach(el => {
-                observer.observe(el);
-            });
-
-        });
-
-        // TAB LOGIC
-        function openTab(tabId) {
-            // Hide all tab contents
-            const contents = document.querySelectorAll('.tab-content');
-            contents.forEach(content => {
-                content.classList.remove('active');
-            });
-
-            // Remove active class from all buttons
-            const buttons = document.querySelectorAll('.tab-btn');
-            buttons.forEach(btn => {
-                btn.classList.remove('active');
-            });
-
-            // Show selected tab content and activate button
-            document.getElementById(tabId).classList.add('active');
-            event.currentTarget.classList.add('active');
-        }
-    </script>
 </body>
 
 </html>

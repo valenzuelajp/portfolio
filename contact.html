@@ -12,8 +12,8 @@
         corePlugins: { preflight: false }
       }
     </script>
-    <link rel="stylesheet" href="CSS/portfolio.css" />
-    <script src="JS/portfolio.js" defer></script>
+    <link rel="stylesheet" href="styles/portfolio.css" />
+    <script src="scripts/portfolio.js" defer></script>
     <title>Contact - Jhon Paul Valenzuela</title>
 </head>
 
@@ -61,28 +61,6 @@
         </div>
     </div>
 
-    <!-- SCROLL ANIMATION LOGIC -->
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            // Intersection Observer for scroll reveals
-            const observerOptions = {
-                threshold: 0.1
-            };
-
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('active');
-                    }
-                });
-            }, observerOptions);
-
-            document.querySelectorAll('[class*="reveal"]').forEach(el => {
-                observer.observe(el);
-            });
-
-        });
-    </script>
 </body>
 
 </html>

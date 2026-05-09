@@ -12,9 +12,9 @@
         corePlugins: { preflight: false }
       }
     </script>
-    <link rel="stylesheet" href="CSS/portfolio.css" />
+    <link rel="stylesheet" href="styles/portfolio.css" />
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="JS/portfolio.js" defer></script>
+    <script src="scripts/portfolio.js" defer></script>
     <title>Certifications - Jhon Paul Valenzuela</title>
 </head>
 
@@ -45,6 +45,7 @@
         <div class="main-content-layout">
             <div class="descriptive-content-area reveal-left">
                 <h2>Certifications</h2>
+                <p class="cert-instruction">Click on a certification to view details and the official badge.</p>
                 <div class="cert-grid">
                     <div class="cert-item reveal delay-100" style="cursor: pointer;" onclick="showCert('images/phyton.png', 'Python Essentials 1', 'https://www.credly.com/badges/d3fe8705-f262-4bc3-a044-9acb3eac7258/public_url')">
                         <img src="images/phyton.png" alt="Python Essentials 1">
@@ -82,48 +83,6 @@
             margin: 0 auto !important;
         }
     </style>
-    <script>
-        function showCert(imageSrc, altText, verifyLink) {
-            Swal.fire({
-                imageUrl: imageSrc,
-                imageAlt: altText,
-                background: 'transparent',
-                backdrop: 'rgba(0,0,0,0.8)',
-                showCancelButton: true,
-                confirmButtonText: 'Verify on Credly',
-                confirmButtonColor: '#643cf0',
-                cancelButtonColor: '#333333',
-                cancelButtonText: 'Close',
-                customClass: {
-                    image: 'swal-uniform-img'
-                }
-            }).then((result) => {
-                if (result.isConfirmed) {
-                    window.open(verifyLink, '_blank');
-                }
-            });
-        }
-
-        document.addEventListener('DOMContentLoaded', () => {
-            // Intersection Observer for scroll reveals
-            const observerOptions = {
-                threshold: 0.1
-            };
-
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('active');
-                    }
-                });
-            }, observerOptions);
-
-            document.querySelectorAll('[class*="reveal"]').forEach(el => {
-                observer.observe(el);
-            });
-
-        });
-    </script>
 </body>
 
 </html>

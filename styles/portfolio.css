@@ -600,6 +600,15 @@ body {
   gap: 12px;
   font-size: 0.95rem;
   color: var(--text-primary-dark);
+  transition: all 0.3s ease;
+  padding: 10px 15px;
+  border-radius: 12px;
+}
+
+.method-item:hover {
+  transform: translateY(-5px) rotateX(5deg) rotateY(10deg);
+  background: var(--accent-light-pink);
+  box-shadow: 10px 10px 0px var(--brand-secondary-purple);
 }
 
 .contact-icon {
@@ -1172,6 +1181,9 @@ body {
 }
 
 .project-type {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   background: linear-gradient(135deg, rgba(100, 60, 240, 0.1) 0%, rgba(224, 214, 255, 0.2) 100%);
   color: var(--brand-primary-purple);
   padding: 6px 14px;
@@ -1180,12 +1192,17 @@ body {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.5px;
+  height: 1.5rem;
+  line-height: normal;
 }
 
 .project-org {
+  display: inline-flex;
+  align-items: center;
   color: var(--text-accent-purple);
   font-size: 0.9rem;
   font-style: italic;
+  height: 1.5rem;
 }
 
 .project-description {
@@ -1233,6 +1250,9 @@ body {
 }
 
 .skill-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   background: var(--accent-soft-lilac);
   color: var(--brand-primary-purple);
   padding: 8px 16px;
@@ -1243,6 +1263,7 @@ body {
   letter-spacing: 0.5px;
   border: 1px solid var(--brand-primary-purple);
   transition: all 0.3s ease;
+  line-height: normal;
 }
 
 .skill-badge:hover {
