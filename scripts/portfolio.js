@@ -61,9 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-/* --- GLOBAL FUNCTIONS (Used in Event Handlers) --- */
 
-// EXPERIENCE.HTML: Tab Switching Logic
 function openTab(tabId) {
     // Hide all tab contents
     const contents = document.querySelectorAll('.tab-content');
