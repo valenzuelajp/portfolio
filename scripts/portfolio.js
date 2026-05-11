@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }, observerOptions);
 
     // Target elements across all pages
-    document.querySelectorAll('[class*="fade"], [class*="slide"], [class*="reveal"]').forEach(el => {
+    document.querySelectorAll('.animate-on-scroll, [class*="fade"], [class*="slide"], [class*="reveal"]').forEach(el => {
         observer.observe(el);
     });
 
